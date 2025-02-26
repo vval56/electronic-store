@@ -1,0 +1,3 @@
+/home/vladislavmogilny65/programming/Upozn/build/CMakeFiles/mygtkapp.dir
+/home/vladislavmogilny65/programming/Upozn/build/CMakeFiles/edit_cache.dir
+/home/vladislavmogilny65/programming/Upozn/build/CMakeFiles/rebuild_cache.dir
