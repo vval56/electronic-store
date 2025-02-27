@@ -726,4 +726,5 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscale.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h \
- /usr/include/gtk-3.0/gtk/gtk-autocleanups.h
+ /usr/include/gtk-3.0/gtk/gtk-autocleanups.h \
+ /home/vladislavmogilny65/programming/Upozn/src/database.h

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/vladislavmogilny65/programming/Upozn/src/database.c" "CMakeFiles/mygtkapp.dir/src/database.c.o" "gcc" "CMakeFiles/mygtkapp.dir/src/database.c.o.d"
   "/home/vladislavmogilny65/programming/Upozn/src/main.c" "CMakeFiles/mygtkapp.dir/src/main.c.o" "gcc" "CMakeFiles/mygtkapp.dir/src/main.c.o.d"
   )
 

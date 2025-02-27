@@ -129,6 +129,30 @@ mygtkapp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/build
 .PHONY : mygtkapp/fast
 
+src/database.o: src/database.c.o
+.PHONY : src/database.o
+
+# target to build an object file
+src/database.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/database.c.o
+.PHONY : src/database.c.o
+
+src/database.i: src/database.c.i
+.PHONY : src/database.i
+
+# target to preprocess a source file
+src/database.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/database.c.i
+.PHONY : src/database.c.i
+
+src/database.s: src/database.c.s
+.PHONY : src/database.s
+
+# target to generate assembly for a file
+src/database.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/database.c.s
+.PHONY : src/database.c.s
+
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mygtkapp"
+	@echo "... src/database.o"
+	@echo "... src/database.i"
+	@echo "... src/database.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
