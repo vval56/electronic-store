@@ -83,30 +83,30 @@ CMakeFiles/mygtkapp.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mygtkapp.dir/src/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladislavmogilny65/programming/Upozn/src/main.c -o CMakeFiles/mygtkapp.dir/src/main.c.s
 
-CMakeFiles/mygtkapp.dir/src/database.c.o: CMakeFiles/mygtkapp.dir/flags.make
-CMakeFiles/mygtkapp.dir/src/database.c.o: /home/vladislavmogilny65/programming/Upozn/src/database.c
-CMakeFiles/mygtkapp.dir/src/database.c.o: CMakeFiles/mygtkapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vladislavmogilny65/programming/Upozn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/mygtkapp.dir/src/database.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mygtkapp.dir/src/database.c.o -MF CMakeFiles/mygtkapp.dir/src/database.c.o.d -o CMakeFiles/mygtkapp.dir/src/database.c.o -c /home/vladislavmogilny65/programming/Upozn/src/database.c
+CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o: CMakeFiles/mygtkapp.dir/flags.make
+CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o: /home/vladislavmogilny65/programming/Upozn/src/database-product/database-prod.c
+CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o: CMakeFiles/mygtkapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vladislavmogilny65/programming/Upozn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o -MF CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o.d -o CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o -c /home/vladislavmogilny65/programming/Upozn/src/database-product/database-prod.c
 
-CMakeFiles/mygtkapp.dir/src/database.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/mygtkapp.dir/src/database.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladislavmogilny65/programming/Upozn/src/database.c > CMakeFiles/mygtkapp.dir/src/database.c.i
+CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladislavmogilny65/programming/Upozn/src/database-product/database-prod.c > CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.i
 
-CMakeFiles/mygtkapp.dir/src/database.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mygtkapp.dir/src/database.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladislavmogilny65/programming/Upozn/src/database.c -o CMakeFiles/mygtkapp.dir/src/database.c.s
+CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladislavmogilny65/programming/Upozn/src/database-product/database-prod.c -o CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.s
 
 # Object files for target mygtkapp
 mygtkapp_OBJECTS = \
 "CMakeFiles/mygtkapp.dir/src/main.c.o" \
-"CMakeFiles/mygtkapp.dir/src/database.c.o"
+"CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o"
 
 # External object files for target mygtkapp
 mygtkapp_EXTERNAL_OBJECTS =
 
 mygtkapp: CMakeFiles/mygtkapp.dir/src/main.c.o
-mygtkapp: CMakeFiles/mygtkapp.dir/src/database.c.o
+mygtkapp: CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o
 mygtkapp: CMakeFiles/mygtkapp.dir/build.make
 mygtkapp: CMakeFiles/mygtkapp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vladislavmogilny65/programming/Upozn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable mygtkapp"

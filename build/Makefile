@@ -129,29 +129,29 @@ mygtkapp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/build
 .PHONY : mygtkapp/fast
 
-src/database.o: src/database.c.o
-.PHONY : src/database.o
+src/database-product/database-prod.o: src/database-product/database-prod.c.o
+.PHONY : src/database-product/database-prod.o
 
 # target to build an object file
-src/database.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/database.c.o
-.PHONY : src/database.c.o
+src/database-product/database-prod.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o
+.PHONY : src/database-product/database-prod.c.o
 
-src/database.i: src/database.c.i
-.PHONY : src/database.i
+src/database-product/database-prod.i: src/database-product/database-prod.c.i
+.PHONY : src/database-product/database-prod.i
 
 # target to preprocess a source file
-src/database.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/database.c.i
-.PHONY : src/database.c.i
+src/database-product/database-prod.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.i
+.PHONY : src/database-product/database-prod.c.i
 
-src/database.s: src/database.c.s
-.PHONY : src/database.s
+src/database-product/database-prod.s: src/database-product/database-prod.c.s
+.PHONY : src/database-product/database-prod.s
 
 # target to generate assembly for a file
-src/database.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/database.c.s
-.PHONY : src/database.c.s
+src/database-product/database-prod.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.s
+.PHONY : src/database-product/database-prod.c.s
 
 src/main.o: src/main.c.o
 .PHONY : src/main.o
@@ -186,9 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mygtkapp"
-	@echo "... src/database.o"
-	@echo "... src/database.i"
-	@echo "... src/database.s"
+	@echo "... src/database-product/database-prod.o"
+	@echo "... src/database-product/database-prod.i"
+	@echo "... src/database-product/database-prod.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mygtkapp.dir/src/database.c.o"
-  "CMakeFiles/mygtkapp.dir/src/database.c.o.d"
+  "CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o"
+  "CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o.d"
   "CMakeFiles/mygtkapp.dir/src/main.c.o"
   "CMakeFiles/mygtkapp.dir/src/main.c.o.d"
   "mygtkapp"
