@@ -1,5 +1,5 @@
-CMakeFiles/mygtkapp.dir/src/main.c.o: \
- /home/vladislavmogilny65/programming/Upozn/src/main.c \
+CMakeFiles/mygtkapp.dir/src/windows/main-w.c.o: \
+ /home/vladislavmogilny65/programming/Upozn/src/windows/main-w.c \
  /usr/include/stdc-predef.h /usr/include/gtk-3.0/gtk/gtk.h \
  /usr/include/gtk-3.0/gdk/gdk.h /usr/include/gtk-3.0/gdk/gdkconfig.h \
  /usr/include/glib-2.0/glib.h /usr/include/glib-2.0/glib/galloca.h \

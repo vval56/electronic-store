@@ -129,30 +129,6 @@ mygtkapp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/build
 .PHONY : mygtkapp/fast
 
-src/database-product/database-prod.o: src/database-product/database-prod.c.o
-.PHONY : src/database-product/database-prod.o
-
-# target to build an object file
-src/database-product/database-prod.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o
-.PHONY : src/database-product/database-prod.c.o
-
-src/database-product/database-prod.i: src/database-product/database-prod.c.i
-.PHONY : src/database-product/database-prod.i
-
-# target to preprocess a source file
-src/database-product/database-prod.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.i
-.PHONY : src/database-product/database-prod.c.i
-
-src/database-product/database-prod.s: src/database-product/database-prod.c.s
-.PHONY : src/database-product/database-prod.s
-
-# target to generate assembly for a file
-src/database-product/database-prod.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.s
-.PHONY : src/database-product/database-prod.c.s
-
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -177,6 +153,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/windows/main-w.o: src/windows/main-w.c.o
+.PHONY : src/windows/main-w.o
+
+# target to build an object file
+src/windows/main-w.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/windows/main-w.c.o
+.PHONY : src/windows/main-w.c.o
+
+src/windows/main-w.i: src/windows/main-w.c.i
+.PHONY : src/windows/main-w.i
+
+# target to preprocess a source file
+src/windows/main-w.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/windows/main-w.c.i
+.PHONY : src/windows/main-w.c.i
+
+src/windows/main-w.s: src/windows/main-w.c.s
+.PHONY : src/windows/main-w.s
+
+# target to generate assembly for a file
+src/windows/main-w.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/windows/main-w.c.s
+.PHONY : src/windows/main-w.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mygtkapp"
-	@echo "... src/database-product/database-prod.o"
-	@echo "... src/database-product/database-prod.i"
-	@echo "... src/database-product/database-prod.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/windows/main-w.o"
+	@echo "... src/windows/main-w.i"
+	@echo "... src/windows/main-w.s"
 .PHONY : help
 
 

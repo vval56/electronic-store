@@ -10,7 +10,7 @@ include_directories(${GTK3_INCLUDE_DIRS})
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${GTK3_CFLAGS_OTHER}")
 
 # Добавление исполняемого файла
-add_executable(mygtkapp src/main.c src/database-product/database-prod.c)
+add_executable(mygtkapp src/main.c src/windows/main-w.c)
 
 # Линковка GTK
 target_link_libraries(mygtkapp ${GTK3_LIBRARIES})

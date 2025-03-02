@@ -1,19 +1,19 @@
 #include <gtk/gtk.h>
-#include "windows/main-window.c"
-#include "windows/login-window.c"
+#include "windows/headers/main-w.h"
 
-gboolean is_admin_logged_in = FALSE;
-
-// Основная функция
 int main(int argc, char *argv[]) {
-    // Инициализация GTK
     gtk_init(&argc, &argv);
 
-    // Показать главное окно
-    show_main_window();
+    GtkApplication *app = gtk_application_new("org.example.myapp", G_APPLICATION_DEFAULT_FLAGS);
+    if (app == NULL) {
+        g_critical("Failed to create GtkApplication");
+        return 1;
+    }
 
-    // Главный цикл GTK
-    gtk_main();
+    g_signal_connect(app, "activate", G_CALLBACK(main_window), NULL);
+    int status = g_application_run(G_APPLICATION(app), argc, argv);
 
-    return 0;
+    g_object_unref(app);
+
+    return status;
 }
