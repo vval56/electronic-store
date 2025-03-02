@@ -727,5 +727,7 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h \
  /usr/include/gtk-3.0/gtk/gtk-autocleanups.h \
- /home/vladislavmogilny65/programming/Upozn/src/database-product/database-prod.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h
+ /home/vladislavmogilny65/programming/Upozn/src/windows/main-window.c \
+ /home/vladislavmogilny65/programming/Upozn/src/windows/login-window.c \
+ /home/vladislavmogilny65/programming/Upozn/src/windows/database-users/users.c \
+ /home/vladislavmogilny65/programming/Upozn/src/windows/login-window.c

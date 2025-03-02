@@ -64,7 +64,9 @@ CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o: /home/vladislavm
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn/src/main.c \
-  /home/vladislavmogilny65/programming/Upozn/src/database-product/database-prod.h \
+  /home/vladislavmogilny65/programming/Upozn/src/windows/database-users/users.c \
+  /home/vladislavmogilny65/programming/Upozn/src/windows/login-window.c \
+  /home/vladislavmogilny65/programming/Upozn/src/windows/main-window.c \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -841,7 +843,6 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
   /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
@@ -911,8 +912,6 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 /usr/include/pango-1.0/pango/pangocairo.h:
 
 /usr/include/pango-1.0/pango/pango-version-macros.h:
-
-/usr/include/pango-1.0/pango/pango-tabs.h:
 
 /usr/include/pango-1.0/pango/pango-script.h:
 
@@ -1164,6 +1163,12 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 
 /usr/include/gtk-3.0/gtk/gtkgesture.h:
 
+/usr/include/gtk-3.0/gtk/gtkfontchooserdialog.h:
+
+/usr/include/gtk-3.0/gtk/gtkfontchooser.h:
+
+/usr/include/gtk-3.0/gtk/gtkfontbutton.h:
+
 /usr/include/glib-2.0/gio/gthemedicon.h:
 
 /usr/include/glib-2.0/gio/gtcpconnection.h:
@@ -1179,10 +1184,6 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 /usr/include/gtk-3.0/gtk/gtkscrollable.h:
 
 /usr/include/glib-2.0/gio/gsocketcontrolmessage.h:
-
-/usr/include/glib-2.0/glib/grand.h:
-
-/usr/include/gtk-3.0/gtk/gtkfontbutton.h:
 
 /usr/include/glib-2.0/gio/gsocket.h:
 
@@ -1255,14 +1256,6 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 /usr/include/glib-2.0/gio/glistmodel.h:
 
 /usr/include/glib-2.0/glib/gstringchunk.h:
-
-/usr/include/glib-2.0/gio/gtestdbus.h:
-
-/usr/include/gtk-3.0/gtk/gtkscrolledwindow.h:
-
-/usr/include/gtk-3.0/gtk/deprecated/gtkaction.h:
-
-/usr/include/gtk-3.0/gtk/deprecated/gtkarrow.h:
 
 /usr/include/glib-2.0/gio/gio.h:
 
@@ -1366,6 +1359,10 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 
 /usr/include/gtk-3.0/gtk/gtkbuildable.h:
 
+/usr/include/pango-1.0/pango/pango-tabs.h:
+
+/home/vladislavmogilny65/programming/Upozn/src/windows/login-window.c:
+
 /usr/include/gtk-3.0/gtk/gtkstyleprovider.h:
 
 /usr/include/glib-2.0/gio/gconverterinputstream.h:
@@ -1390,6 +1387,14 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 
 /usr/include/glib-2.0/gio/gbytesicon.h:
 
+/usr/include/glib-2.0/gio/gbufferedoutputstream.h:
+
+/usr/include/gtk-3.0/gtk/gtklevelbar.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/glib-2.0/gio/gbufferedinputstream.h:
+
 /home/vladislavmogilny65/programming/Upozn/src/main.c:
 
 /usr/include/gtk-3.0/gtk/gtksizegroup.h:
@@ -1407,10 +1412,6 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 /usr/include/glib-2.0/gio/gdbusobjectmanager.h:
 
 /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-simple-anim.h:
-
-/usr/include/glib-2.0/gio/gtlscertificate.h:
-
-/usr/include/glib-2.0/gio/gcredentials.h:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtkhbox.h:
 
@@ -1434,12 +1435,6 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
-/usr/include/gtk-3.0/gtk/gtklevelbar.h:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-/usr/include/glib-2.0/gio/gbufferedoutputstream.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtkthemingengine.h:
@@ -1453,10 +1448,6 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/glib-2.0/gio/giostream.h:
-
-/usr/include/glib-2.0/gio/gtlsclientconnection.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
@@ -1496,8 +1487,6 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 
 /usr/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h:
 
-/usr/include/glib-2.0/gio/gtlsbackend.h:
-
 /usr/include/glib-2.0/gobject/gsourceclosure.h:
 
 /usr/include/glib-2.0/gio/gsocketaddress.h:
@@ -1529,6 +1518,12 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 /usr/include/gtk-3.0/gtk/gtkfontchooserwidget.h:
 
 /usr/include/glib-2.0/gobject/gobject-visibility.h:
+
+/home/vladislavmogilny65/programming/Upozn/src/windows/main-window.c:
+
+/usr/include/glib-2.0/glib/gdatetime.h:
+
+/usr/include/gtk-3.0/gdk/gdkcairo.h:
 
 /usr/include/glib-2.0/gio/gsettings.h:
 
@@ -1690,6 +1685,14 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 
 /usr/include/atk-1.0/atk/atkdocument.h:
 
+/usr/include/glib-2.0/gio/gtestdbus.h:
+
+/usr/include/gtk-3.0/gtk/gtkscrolledwindow.h:
+
+/usr/include/gtk-3.0/gtk/deprecated/gtkaction.h:
+
+/usr/include/gtk-3.0/gtk/deprecated/gtkarrow.h:
+
 /usr/include/gtk-3.0/gtk/deprecated/gtktable.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
@@ -1725,6 +1728,8 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 /usr/include/gtk-3.0/gtk/gtkcolorchooser.h:
 
 /usr/include/gtk-3.0/gtk/gtkfilefilter.h:
+
+/usr/include/atk-1.0/atk/atkhypertext.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h:
 
@@ -1762,8 +1767,6 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 
 /usr/include/atk-1.0/atk/atkaction.h:
 
-/usr/include/gtk-3.0/gtk/gtkfontchooserdialog.h:
-
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/gtk-3.0/gtk/gtkpapersize.h:
@@ -1771,8 +1774,6 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 /usr/include/glib-2.0/gio/gzlibcompressor.h:
 
 /usr/include/atk-1.0/atk/atkhyperlink.h:
-
-/usr/include/atk-1.0/atk/atkhypertext.h:
 
 /usr/include/glib-2.0/gio/gmemoryoutputstream.h:
 
@@ -1908,8 +1909,6 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 
 /usr/include/glib-2.0/glib/deprecated/gallocator.h:
 
-/usr/include/glib-2.0/gio/gbufferedinputstream.h:
-
 /usr/include/atk-1.0/atk/atkplug.h:
 
 /usr/include/glib-2.0/gio/gdbusnameowning.h:
@@ -1931,6 +1930,18 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 /usr/include/gtk-3.0/gtk/gtkicontheme.h:
 
 /usr/include/glib-2.0/gio/gasyncinitable.h:
+
+/usr/include/glib-2.0/gio/gtlsbackend.h:
+
+/usr/include/glib-2.0/gio/gcredentials.h:
+
+/usr/include/glib-2.0/gio/gtlscertificate.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/include/glib-2.0/gio/gtlsclientconnection.h:
+
+/usr/include/glib-2.0/glib/grand.h:
 
 /usr/include/glib-2.0/gio/gunixcredentialsmessage.h:
 
@@ -1966,6 +1977,8 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 
 /usr/include/glib-2.0/glib/gbacktrace.h:
 
+/home/vladislavmogilny65/programming/Upozn/src/windows/database-users/users.c:
+
 /usr/include/glib-2.0/gio/gunixfdlist.h:
 
 /usr/include/glib-2.0/glib/deprecated/gmain.h:
@@ -1993,10 +2006,6 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 /usr/include/glib-2.0/glib/gconvert.h:
 
 /usr/include/glib-2.0/glib/gdataset.h:
-
-/usr/include/glib-2.0/glib/gdatetime.h:
-
-/usr/include/gtk-3.0/gdk/gdkcairo.h:
 
 /usr/include/glib-2.0/gio/gfilemonitor.h:
 
@@ -2413,5 +2422,3 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 /usr/include/pango-1.0/pango/pango.h:
 
 /usr/include/gtk-3.0/gtk/gtkfixed.h:
-
-/usr/include/gtk-3.0/gtk/gtkfontchooser.h:

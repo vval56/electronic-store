@@ -66,7 +66,9 @@ CMakeFiles/mygtkapp.dir/src/database-product/database-prod.c.o
 
 CMakeFiles/mygtkapp.dir/src/main.c.o
  /home/vladislavmogilny65/programming/Upozn/src/main.c
- /home/vladislavmogilny65/programming/Upozn/src/database-product/database-prod.h
+ /home/vladislavmogilny65/programming/Upozn/src/windows/database-users/users.c
+ /home/vladislavmogilny65/programming/Upozn/src/windows/login-window.c
+ /home/vladislavmogilny65/programming/Upozn/src/windows/main-window.c
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
@@ -843,7 +845,6 @@ CMakeFiles/mygtkapp.dir/src/main.c.o
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
