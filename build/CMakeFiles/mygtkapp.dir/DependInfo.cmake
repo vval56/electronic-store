@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/vladislavmogilny65/programming/Upozn/src/main.c" "CMakeFiles/mygtkapp.dir/src/main.c.o" "gcc" "CMakeFiles/mygtkapp.dir/src/main.c.o.d"
+  "/home/vladislavmogilny65/programming/Upozn/src/windows/login-w.c" "CMakeFiles/mygtkapp.dir/src/windows/login-w.c.o" "gcc" "CMakeFiles/mygtkapp.dir/src/windows/login-w.c.o.d"
   "/home/vladislavmogilny65/programming/Upozn/src/windows/main-w.c" "CMakeFiles/mygtkapp.dir/src/windows/main-w.c.o" "gcc" "CMakeFiles/mygtkapp.dir/src/windows/main-w.c.o.d"
   )
 

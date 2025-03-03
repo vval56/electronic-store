@@ -153,6 +153,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/windows/login-w.o: src/windows/login-w.c.o
+.PHONY : src/windows/login-w.o
+
+# target to build an object file
+src/windows/login-w.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/windows/login-w.c.o
+.PHONY : src/windows/login-w.c.o
+
+src/windows/login-w.i: src/windows/login-w.c.i
+.PHONY : src/windows/login-w.i
+
+# target to preprocess a source file
+src/windows/login-w.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/windows/login-w.c.i
+.PHONY : src/windows/login-w.c.i
+
+src/windows/login-w.s: src/windows/login-w.c.s
+.PHONY : src/windows/login-w.s
+
+# target to generate assembly for a file
+src/windows/login-w.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/windows/login-w.c.s
+.PHONY : src/windows/login-w.c.s
+
 src/windows/main-w.o: src/windows/main-w.c.o
 .PHONY : src/windows/main-w.o
 
@@ -189,6 +213,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/windows/login-w.o"
+	@echo "... src/windows/login-w.i"
+	@echo "... src/windows/login-w.s"
 	@echo "... src/windows/main-w.o"
 	@echo "... src/windows/main-w.i"
 	@echo "... src/windows/main-w.s"

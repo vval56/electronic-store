@@ -81,12 +81,12 @@ clean: CMakeFiles/mygtkapp.dir/clean
 CMakeFiles/mygtkapp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vladislavmogilny65/programming/Upozn/build/CMakeFiles --progress-num=1,2,3 "Built target mygtkapp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vladislavmogilny65/programming/Upozn/build/CMakeFiles --progress-num=1,2,3,4 "Built target mygtkapp"
 .PHONY : CMakeFiles/mygtkapp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mygtkapp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladislavmogilny65/programming/Upozn/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladislavmogilny65/programming/Upozn/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mygtkapp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladislavmogilny65/programming/Upozn/build/CMakeFiles 0
 .PHONY : CMakeFiles/mygtkapp.dir/rule

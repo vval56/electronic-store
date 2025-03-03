@@ -785,6 +785,7 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
   /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
 
 CMakeFiles/mygtkapp.dir/src/windows/main-w.c.o: /home/vladislavmogilny65/programming/Upozn/src/windows/main-w.c \
+  /home/vladislavmogilny65/programming/Upozn/src/windows/headers/login-w.h \
   /home/vladislavmogilny65/programming/Upozn/src/windows/headers/main-w.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -1639,6 +1640,8 @@ CMakeFiles/mygtkapp.dir/src/windows/main-w.c.o: /home/vladislavmogilny65/program
 /usr/include/x86_64-linux-gnu/bits/sigthread.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigstksz.h:
+
+/home/vladislavmogilny65/programming/Upozn/src/windows/headers/login-w.h:
 
 /usr/include/x86_64-linux-gnu/bits/signum-generic.h:
 
