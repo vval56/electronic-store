@@ -1,16 +1,15 @@
 #include <gtk/gtk.h>
 #include "headers/login-w.h"
+#include "databasel/databasel.h"
 
-// Обработчик нажатия на кнопку "Log in"
 void login_window(GtkButton *button, gpointer data) {
     // Создание диалогового окна
     GtkWidget *dialog = gtk_dialog_new_with_buttons(
-        "Log in", // Заголовок диалога
-        GTK_WINDOW(data), // Родительское окно
-        GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT, // Флаги
-        "Cancel", GTK_RESPONSE_CANCEL, // Кнопка "Cancel"
-        "Log In", GTK_RESPONSE_OK, // Кнопка "Log In"
-        "Enter as Administrator", 200, // Кнопка "Enter as Administrator"
+        "Log in",
+        GTK_WINDOW(data),
+        GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+        "Cancel", GTK_RESPONSE_CANCEL,
+        "Log In", GTK_RESPONSE_OK,
         NULL
     );
 
@@ -37,27 +36,49 @@ void login_window(GtkButton *button, gpointer data) {
     // Добавление сетки в контентную область диалога
     GtkWidget *content_area = gtk_dialog_get_content_area(GTK_DIALOG(dialog));
     gtk_container_add(GTK_CONTAINER(content_area), grid);
-
-    // Показ всех виджетов
     gtk_widget_show_all(grid);
+
+    // Подключение к базе данных
+    sqlite3 *db = database_connect("electronic_store.db"); // Имя файла базы данных
+    if (db == NULL) {
+        g_print("Failed to connect to the database.\n");
+        gtk_widget_destroy(dialog);
+        return;
+    }
 
     // Запуск диалога и получение ответа
     int response = gtk_dialog_run(GTK_DIALOG(dialog));
-
-    // Обработка ответа
     if (response == GTK_RESPONSE_OK) {
         const gchar *username = gtk_entry_get_text(GTK_ENTRY(username_entry));
         const gchar *password = gtk_entry_get_text(GTK_ENTRY(password_entry));
 
-        // Простая проверка учетных данных (замените на реальную логику)
-        if (g_strcmp0(username, "admin") == 0 && g_strcmp0(password, "password") == 0) {
-            g_print("Login successful!\n");
+        gboolean is_admin = FALSE;
+
+        // Проверка учетных данных
+        if (check_credentials(db, username, password, &is_admin)) {
+            if (is_admin) {
+                g_print("Login successful as Administrator!\n");
+            } else {
+                g_print("Login successful as User!\n");
+            }
         } else {
             g_print("Invalid username or password.\n");
+
+            // Показать сообщение об ошибке
+            GtkWidget *error_dialog = gtk_message_dialog_new(
+                GTK_WINDOW(data),
+                GTK_DIALOG_MODAL,
+                GTK_MESSAGE_ERROR,
+                GTK_BUTTONS_OK,
+                "Invalid username or password!"
+            );
+            gtk_dialog_run(GTK_DIALOG(error_dialog));
+            gtk_widget_destroy(error_dialog);
         }
-    } else if (response == 200) { // Нажата кнопка "Enter as Administrator"
-        g_print("Administrator mode selected.\n");
     }
+
+    // Закрытие соединения с базой данных
+    database_disconnect(db);
 
     // Уничтожение диалогового окна
     gtk_widget_destroy(dialog);
