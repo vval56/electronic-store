@@ -1,7 +1,13 @@
 #include "main.h"
+#include <stdbool.h>
 
 // Подключение к базе данных
 sqlite3 *db = NULL; // Имя файла базы данных
+
+static void on_activate(GtkApplication *app, gpointer user_data) {
+    // Создание главного окна
+    main_window(app, NULL, false);
+}
 
 int main(int argc, char *argv[]) {
     gtk_init(&argc, &argv);
@@ -12,7 +18,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    g_signal_connect(app, "activate", G_CALLBACK(main_window), NULL);
+    g_signal_connect(app, "activate", G_CALLBACK(on_activate), NULL);
     int status = g_application_run(G_APPLICATION(app), argc, argv);
 
     g_object_unref(app);

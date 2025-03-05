@@ -22,6 +22,7 @@ set(SOURCES
     src/windows/main-w.c
     src/windows/login-w.c
     src/windows/databasel/databasel.c
+    src/windows/admin-w.c
 )
 
 # Создание исполняемого файла

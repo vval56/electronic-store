@@ -153,6 +153,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/windows/admin-w.o: src/windows/admin-w.c.o
+.PHONY : src/windows/admin-w.o
+
+# target to build an object file
+src/windows/admin-w.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/windows/admin-w.c.o
+.PHONY : src/windows/admin-w.c.o
+
+src/windows/admin-w.i: src/windows/admin-w.c.i
+.PHONY : src/windows/admin-w.i
+
+# target to preprocess a source file
+src/windows/admin-w.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/windows/admin-w.c.i
+.PHONY : src/windows/admin-w.c.i
+
+src/windows/admin-w.s: src/windows/admin-w.c.s
+.PHONY : src/windows/admin-w.s
+
+# target to generate assembly for a file
+src/windows/admin-w.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/windows/admin-w.c.s
+.PHONY : src/windows/admin-w.c.s
+
 src/windows/databasel/databasel.o: src/windows/databasel/databasel.c.o
 .PHONY : src/windows/databasel/databasel.o
 
@@ -237,6 +261,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/windows/admin-w.o"
+	@echo "... src/windows/admin-w.i"
+	@echo "... src/windows/admin-w.s"
 	@echo "... src/windows/databasel/databasel.o"
 	@echo "... src/windows/databasel/databasel.i"
 	@echo "... src/windows/databasel/databasel.s"

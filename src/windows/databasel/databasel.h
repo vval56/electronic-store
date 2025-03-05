@@ -12,6 +12,7 @@ extern sqlite3 *db;
 gboolean registrate_user(sqlite3 *db, const gchar *username, const gchar *password, gboolean is_admin);
 sqlite3* database_connect(const char *db_name);
 gboolean check_credentials(sqlite3 *db, const gchar *username, const gchar *password, gboolean *is_admin);
+void load_database(GtkListStore * store);
 void database_disconnect(sqlite3 *db);
 
-#endif // DATABASEL_H
+#endif

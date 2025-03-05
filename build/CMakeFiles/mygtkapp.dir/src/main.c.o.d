@@ -730,4 +730,5 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: \
  /usr/include/gtk-3.0/gtk/gtk-autocleanups.h /usr/include/sqlite3.h \
  /home/vladislavmogilny65/programming/Upozn/src/windows/headers/main-w.h \
  /home/vladislavmogilny65/programming/Upozn/src/windows/databasel/databasel.h \
- /home/vladislavmogilny65/programming/Upozn/src/windows/headers/login-w.h
+ /home/vladislavmogilny65/programming/Upozn/src/windows/headers/login-w.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h

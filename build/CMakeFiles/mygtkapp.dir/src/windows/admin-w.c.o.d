@@ -1,9 +1,10 @@
-CMakeFiles/mygtkapp.dir/src/windows/login-w.c.o: \
- /home/vladislavmogilny65/programming/Upozn/src/windows/login-w.c \
- /usr/include/stdc-predef.h /usr/include/gtk-3.0/gtk/gtk.h \
- /usr/include/gtk-3.0/gdk/gdk.h /usr/include/gtk-3.0/gdk/gdkconfig.h \
- /usr/include/glib-2.0/glib.h /usr/include/glib-2.0/glib/galloca.h \
- /usr/include/glib-2.0/glib/gtypes.h \
+CMakeFiles/mygtkapp.dir/src/windows/admin-w.c.o: \
+ /home/vladislavmogilny65/programming/Upozn/src/windows/admin-w.c \
+ /usr/include/stdc-predef.h \
+ /home/vladislavmogilny65/programming/Upozn/src/windows/headers/admin-w.h \
+ /usr/include/gtk-3.0/gtk/gtk.h /usr/include/gtk-3.0/gdk/gdk.h \
+ /usr/include/gtk-3.0/gdk/gdkconfig.h /usr/include/glib-2.0/glib.h \
+ /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
  /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h \
  /usr/include/glib-2.0/glib/gmacros.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
@@ -727,8 +728,6 @@ CMakeFiles/mygtkapp.dir/src/windows/login-w.c.o: \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h \
  /usr/include/gtk-3.0/gtk/gtk-autocleanups.h \
- /home/vladislavmogilny65/programming/Upozn/src/windows/headers/login-w.h \
+ /home/vladislavmogilny65/programming/Upozn/src/windows/headers/main-w.h \
  /home/vladislavmogilny65/programming/Upozn/src/windows/databasel/databasel.h \
- /usr/include/sqlite3.h \
- /home/vladislavmogilny65/programming/Upozn/src/windows/headers/admin-w.h \
- /home/vladislavmogilny65/programming/Upozn/src/windows/headers/main-w.h
+ /usr/include/sqlite3.h

@@ -41,7 +41,7 @@ void calculate_window(int *window_width, int *window_height) {
 }
 
 // Обработчик сигнала "activate"
-void main_window(GtkApplication *app, gpointer user_data) {
+void main_window(GtkApplication *app, gpointer user_data, gboolean is_admin) {
     GtkWidget *window = gtk_application_window_new(app);
     gtk_window_set_title(GTK_WINDOW(window), "Electronic Store");
 
@@ -56,7 +56,7 @@ void main_window(GtkApplication *app, gpointer user_data) {
     GtkWidget *login_button = gtk_button_new_with_label("Log in");
 
     // Подключение обработчика к кнопке
-    g_signal_connect(login_button, "clicked", G_CALLBACK(login_window), window);
+    g_signal_connect(login_button, "clicked", G_CALLBACK(login_window), app);
 
     // Основной контейнер
     GtkWidget *vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 10);

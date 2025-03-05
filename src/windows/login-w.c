@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include "headers/login-w.h"
 #include "databasel/databasel.h"
+#include "headers/admin-w.h"
+#include "headers/main-w.h"
 
 // Используем глобальную переменную db из main.c
 extern sqlite3 *db;
@@ -39,7 +41,8 @@ void register_user(GtkButton *button, gpointer data) {
     }
 
     // Регистрация пользователя
-    if (registrate_user(db, username, password, 0)) {
+    gboolean is_admin = FALSE; // По умолчанию регистрируем обычного пользователя
+    if (registrate_user(db, username, password, is_admin)) {
         g_print("User registered successfully!\n");
 
         // Закрытие текущего окна
@@ -47,7 +50,7 @@ void register_user(GtkButton *button, gpointer data) {
 
         // Переход к главному окну
         GtkApplication *app = gtk_window_get_application(GTK_WINDOW(dialog));
-        main_window(app, NULL); // Передаём объект GtkApplication
+        main_window(app, NULL, is_admin); // Передаём объект GtkApplication и флаг is_admin
     } else {
         GtkWidget *error_dialog = gtk_message_dialog_new(
             GTK_WINDOW(dialog),
@@ -114,6 +117,12 @@ void registration_window(GtkWidget *dialog) {
 }
 
 void on_dialog_response(GtkDialog *dialog, gint response_id, gpointer user_data) {
+    GtkApplication *app = GTK_APPLICATION(user_data); // Получаем GtkApplication из user_data
+    if (app == NULL) {
+        g_critical("GtkApplication is NULL");
+        return;
+    }
+
     if (response_id == GTK_RESPONSE_OK) {
         // Обработка входа
         GtkWidget *content_area = gtk_dialog_get_content_area(dialog);
@@ -131,16 +140,15 @@ void on_dialog_response(GtkDialog *dialog, gint response_id, gpointer user_data)
         if (check_credentials(db, username, password, &is_admin)) {
             if (is_admin) {
                 g_print("Login successful as Administrator!\n");
+
+                // Открытие окна администратора
+                admin_window(app, NULL); // Передаём объект GtkApplication
             } else {
                 g_print("Login successful as User!\n");
             }
 
-            // Закрытие текущего окна
+            // Закрытие диалога входа
             gtk_widget_destroy(GTK_WIDGET(dialog));
-
-            // Переход к главному окну
-            GtkApplication *app = gtk_window_get_application(GTK_WINDOW(dialog));
-            main_window(app, NULL); // Передаём объект GtkApplication
         } else {
             g_print("Invalid username or password.\n");
             GtkWidget *error_dialog = gtk_message_dialog_new(
@@ -162,10 +170,16 @@ void on_dialog_response(GtkDialog *dialog, gint response_id, gpointer user_data)
     }
 }
 
-void login_window(GtkButton *button, gpointer data) {
+void login_window(GtkButton *button, gpointer user_data) {
+    GtkApplication *app = GTK_APPLICATION(user_data); // Получаем GtkApplication из user_data
+    if (app == NULL) {
+        g_critical("GtkApplication is NULL");
+        return;
+    }
+
     GtkWidget *dialog = gtk_dialog_new_with_buttons(
         "Log in",
-        GTK_WINDOW(data),
+        GTK_WINDOW(button), // Родительское окно
         GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
         "Cancel", GTK_RESPONSE_CANCEL,
         "Log In", GTK_RESPONSE_OK,
@@ -199,7 +213,7 @@ void login_window(GtkButton *button, gpointer data) {
     gtk_widget_show_all(dialog);
 
     // Подключение сигналов для кнопок
-    g_signal_connect(dialog, "response", G_CALLBACK(on_dialog_response), NULL);
+    g_signal_connect(dialog, "response", G_CALLBACK(on_dialog_response), app); // Передаём GtkApplication
 
     // Проверка подключения к базе данных
     if (db == NULL) {
