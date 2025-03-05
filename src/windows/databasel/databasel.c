@@ -48,6 +48,35 @@ gboolean check_credentials(sqlite3 *db, const gchar *username, const gchar *pass
     return TRUE; // Учетные данные найдены
 }
 
+gboolean registrate_user(sqlite3 *db, const gchar *username, const gchar *password, gboolean is_admin) {
+    char *err_msg = 0;
+    const char *sql = "INSERT INTO users (username, password, is_admin) VALUES (?, ?, ?);";
+    sqlite3_stmt *stmt;
+
+    // Подготовка SQL-запроса
+    int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, 0);
+    if (rc != SQLITE_OK) {
+        g_print("Failed to prepare statement: %s\n", sqlite3_errmsg(db));
+        return FALSE;
+    }
+
+    // Привязка параметров
+    sqlite3_bind_text(stmt, 1, username, -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 2, password, -1, SQLITE_STATIC);
+    sqlite3_bind_int(stmt, 3, is_admin);
+
+    // Выполнение запроса
+    rc = sqlite3_step(stmt);
+    if (rc != SQLITE_DONE) {
+        g_print("Failed to execute statement: %s\n", sqlite3_errmsg(db));
+        sqlite3_finalize(stmt);
+        return FALSE;
+    }
+
+    sqlite3_finalize(stmt);
+    return TRUE;
+}
+
 // Закрытие соединения с базой данных
 void database_disconnect(sqlite3 *db) {
     if (db != NULL) {
