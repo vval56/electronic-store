@@ -1,6 +1,10 @@
 #include <gtk/gtk.h>
+#include <stdio.h>
 #include "headers/login-w.h"
 #include "databasel/databasel.h"
+
+// Используем глобальную переменную db из main.c
+extern sqlite3 *db;
 
 void login_window(GtkButton *button, gpointer data) {
     // Создание диалогового окна
@@ -38,12 +42,14 @@ void login_window(GtkButton *button, gpointer data) {
     gtk_container_add(GTK_CONTAINER(content_area), grid);
     gtk_widget_show_all(grid);
 
-    // Подключение к базе данных
-    sqlite3 *db = database_connect("electronic_store.db"); // Имя файла базы данных
+    // Проверяем подключение к базе данных
     if (db == NULL) {
-        g_print("Failed to connect to the database.\n");
-        gtk_widget_destroy(dialog);
-        return;
+        db = database_connect("electronic_store.db"); // Имя файла базы данных
+        if (db == NULL) {
+            g_print("Failed to connect to the database.\n");
+            gtk_widget_destroy(dialog);
+            return;
+        }
     }
 
     // Запуск диалога и получение ответа
@@ -76,9 +82,6 @@ void login_window(GtkButton *button, gpointer data) {
             gtk_widget_destroy(error_dialog);
         }
     }
-
-    // Закрытие соединения с базой данных
-    database_disconnect(db);
 
     // Уничтожение диалогового окна
     gtk_widget_destroy(dialog);

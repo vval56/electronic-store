@@ -2,6 +2,21 @@
 #include "headers/main-w.h"
 #include "headers/login-w.h"
 
+void set_window_icon(GtkWindow *window, const gchar *icon_path) {
+    // Загрузка изображения из файла
+    GdkPixbuf *pixbuf = gdk_pixbuf_new_from_file(icon_path, NULL);
+    if (pixbuf == NULL) {
+        g_print("Failed to load icon from file: %s\n", icon_path);
+        return;
+    }
+
+    // Установка иконки для окна
+    gtk_window_set_icon(window, pixbuf);
+
+    // Освобождение ресурсов
+    g_object_unref(pixbuf);
+}
+
 // Функция для вычисления размера окна
 void calculate_window(int *window_width, int *window_height) {
     GdkDisplay *display = gdk_display_get_default();
@@ -34,6 +49,8 @@ void main_window(GtkApplication *app, gpointer user_data) {
     calculate_window(&window_width, &window_height);
     gtk_window_set_default_size(GTK_WINDOW(window), window_width, window_height);
     gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
+
+    set_window_icon(GTK_WINDOW(window), "/home/vladislavmogilny65/programming/Upozn/icon/icon.png");
 
     // Создание кнопки входа
     GtkWidget *login_button = gtk_button_new_with_label("Log in");

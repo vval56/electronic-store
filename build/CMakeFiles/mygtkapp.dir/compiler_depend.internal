@@ -3,6 +3,9 @@
 
 CMakeFiles/mygtkapp.dir/src/main.c.o
  /home/vladislavmogilny65/programming/Upozn/src/main.c
+ /home/vladislavmogilny65/programming/Upozn/src/main.h
+ /home/vladislavmogilny65/programming/Upozn/src/windows/databasel/databasel.h
+ /home/vladislavmogilny65/programming/Upozn/src/windows/headers/login-w.h
  /home/vladislavmogilny65/programming/Upozn/src/windows/headers/main-w.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
@@ -676,6 +679,7 @@ CMakeFiles/mygtkapp.dir/src/main.c.o
  /usr/include/pthread.h
  /usr/include/sched.h
  /usr/include/signal.h
+ /usr/include/sqlite3.h
  /usr/include/stdc-predef.h
  /usr/include/stdint.h
  /usr/include/stdio.h
