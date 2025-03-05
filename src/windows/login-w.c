@@ -46,7 +46,8 @@ void register_user(GtkButton *button, gpointer data) {
         gtk_widget_destroy(dialog);
 
         // Переход к главному окну
-        main_window(NULL, NULL); // Вызов функции для отображения главного окна
+        GtkApplication *app = gtk_window_get_application(GTK_WINDOW(dialog));
+        main_window(app, NULL); // Передаём объект GtkApplication
     } else {
         GtkWidget *error_dialog = gtk_message_dialog_new(
             GTK_WINDOW(dialog),
@@ -138,7 +139,8 @@ void on_dialog_response(GtkDialog *dialog, gint response_id, gpointer user_data)
             gtk_widget_destroy(GTK_WIDGET(dialog));
 
             // Переход к главному окну
-            main_window(NULL, NULL); // Вызов функции для отображения главного окна
+            GtkApplication *app = gtk_window_get_application(GTK_WINDOW(dialog));
+            main_window(app, NULL); // Передаём объект GtkApplication
         } else {
             g_print("Invalid username or password.\n");
             GtkWidget *error_dialog = gtk_message_dialog_new(
