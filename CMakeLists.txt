@@ -23,6 +23,7 @@ set(SOURCES
     src/windows/login-w.c
     src/windows/databasel/databasel.c
     src/windows/admin-w.c
+    src/windows/databasel/products-data.c
 )
 
 # Создание исполняемого файла
@@ -44,5 +45,7 @@ target_include_directories(mygtkapp PRIVATE
 configure_file(
     "${CMAKE_SOURCE_DIR}/sql/data-l.sql"
     "${CMAKE_BINARY_DIR}/data-l.sql"
+    "${CMAKE_SOURCE_DIR}/sql/data-p.sql"
+    "${CMAKE_BINARY_DIR}/data-p.sql"
     COPYONLY
 )

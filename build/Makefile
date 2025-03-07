@@ -201,6 +201,30 @@ src/windows/databasel/databasel.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/windows/databasel/databasel.c.s
 .PHONY : src/windows/databasel/databasel.c.s
 
+src/windows/databasel/products-data.o: src/windows/databasel/products-data.c.o
+.PHONY : src/windows/databasel/products-data.o
+
+# target to build an object file
+src/windows/databasel/products-data.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/windows/databasel/products-data.c.o
+.PHONY : src/windows/databasel/products-data.c.o
+
+src/windows/databasel/products-data.i: src/windows/databasel/products-data.c.i
+.PHONY : src/windows/databasel/products-data.i
+
+# target to preprocess a source file
+src/windows/databasel/products-data.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/windows/databasel/products-data.c.i
+.PHONY : src/windows/databasel/products-data.c.i
+
+src/windows/databasel/products-data.s: src/windows/databasel/products-data.c.s
+.PHONY : src/windows/databasel/products-data.s
+
+# target to generate assembly for a file
+src/windows/databasel/products-data.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mygtkapp.dir/build.make CMakeFiles/mygtkapp.dir/src/windows/databasel/products-data.c.s
+.PHONY : src/windows/databasel/products-data.c.s
+
 src/windows/login-w.o: src/windows/login-w.c.o
 .PHONY : src/windows/login-w.o
 
@@ -267,6 +291,9 @@ help:
 	@echo "... src/windows/databasel/databasel.o"
 	@echo "... src/windows/databasel/databasel.i"
 	@echo "... src/windows/databasel/databasel.s"
+	@echo "... src/windows/databasel/products-data.o"
+	@echo "... src/windows/databasel/products-data.i"
+	@echo "... src/windows/databasel/products-data.s"
 	@echo "... src/windows/login-w.o"
 	@echo "... src/windows/login-w.i"
 	@echo "... src/windows/login-w.s"

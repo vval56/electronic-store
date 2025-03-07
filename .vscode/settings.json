@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:Upozn}/sql/data-l.sql",
+            "name": "logins",
+            "group": "elecronic store"
+        }
+    ]
+}
