@@ -730,4 +730,5 @@ CMakeFiles/mygtkapp.dir/src/windows/admin-w.c.o: \
  /usr/include/gtk-3.0/gtk/gtk-autocleanups.h \
  /home/vladislavmogilny65/programming/Upozn/src/windows/headers/main-w.h \
  /home/vladislavmogilny65/programming/Upozn/src/windows/databasel/databasel.h \
- /usr/include/sqlite3.h
+ /usr/include/sqlite3.h \
+ /home/vladislavmogilny65/programming/Upozn/src/windows/databasel/products-data.h

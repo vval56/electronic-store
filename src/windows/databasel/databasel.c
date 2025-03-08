@@ -77,8 +77,8 @@ gboolean registrate_user(sqlite3 *db, const gchar *username, const gchar *passwo
     return TRUE;
 }
 
-void load_database(GtkListStore * store){
-    const char *sql = "SELECT id, username, password FROM users"; // Пример SQL-запроса
+void load_users(GtkListStore *store) {
+    const char *sql = "SELECT * FROM users"; // Замените "users" на имя вашей таблицы с пользователями
     sqlite3_stmt *stmt;
 
     int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
@@ -88,16 +88,16 @@ void load_database(GtkListStore * store){
     }
 
     while (sqlite3_step(stmt) == SQLITE_ROW) {
-        int id = sqlite3_column_int(stmt, 0);
-        const char *username = (const char *)sqlite3_column_text(stmt, 1);
-        char *password = (char *)sqlite3_column_text(stmt, 2);
-
         GtkTreeIter iter;
         gtk_list_store_append(store, &iter);
-        gtk_list_store_set(store, &iter, 0, id, 1, username, 2, password, -1);
+
+        gtk_list_store_set(store, &iter,
+            0, sqlite3_column_int(stmt, 0), // id
+            1, (const char *)sqlite3_column_text(stmt, 1), // username
+            2, (const char *)sqlite3_column_text(stmt, 2), // password
+            -1);
     }
 
-    // Освобождение ресурсов
     sqlite3_finalize(stmt);
 }
 

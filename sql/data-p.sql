@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS products (
     brand TEXT NOT NULL,
     other_name TEXT NOT NULL,
     price INT NOT NULL,
-    quantity TEXT NOT NULL,
+    quantity INT NOT NULL,
     category TEXT NOT NULL,
     size  TEXT NOT NULL,
     diagonal  TEXT NOT NULL,
@@ -12,5 +12,3 @@ CREATE TABLE IF NOT EXISTS products (
     storage TEXT NOT NULL,
     camera TEXT NOT NULL
 );
-
-

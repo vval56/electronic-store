@@ -792,6 +792,7 @@ CMakeFiles/mygtkapp.dir/src/main.c.o: /home/vladislavmogilny65/programming/Upozn
 
 CMakeFiles/mygtkapp.dir/src/windows/admin-w.c.o: /home/vladislavmogilny65/programming/Upozn/src/windows/admin-w.c \
   /home/vladislavmogilny65/programming/Upozn/src/windows/databasel/databasel.h \
+  /home/vladislavmogilny65/programming/Upozn/src/windows/databasel/products-data.h \
   /home/vladislavmogilny65/programming/Upozn/src/windows/headers/admin-w.h \
   /home/vladislavmogilny65/programming/Upozn/src/windows/headers/main-w.h \
   /usr/include/alloca.h \
